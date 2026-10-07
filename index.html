@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🌤️ Weather Dashboard</h1>
+        <p class="subtitle">Search for the current weather of any city</p>
+
+        <!-- Search Section -->
+        <form id="searchForm" class="search-box" novalidate>
+            <input type="text" id="cityInput" placeholder="Enter city name..." aria-label="City name" autocomplete="off">
+            <button type="submit" id="searchBtn">🔍 Search</button>
+        </form>
+
+        <!-- Validation / error message -->
+        <p id="error" class="error" role="alert"></p>
+
+        <!-- Initial message -->
+        <p id="intro" class="intro">Search for a city to view the current weather.</p>
+
+        <!-- Loading state -->
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+
+        <!-- Weather Dashboard -->
+        <div id="weatherCard" class="weather-card">
+
+            <h2 id="cityName">City</h2>
+            <p id="dateTime" class="date-time"></p>
+
+            <div class="weather-icon" id="weatherIcon">🌤️</div>
+            <h3 id="temperature">-- °C</h3>
+            <p id="condition">Weather Condition</p>
+
+            <div class="weather-details">
+                <div class="detail"><span>🌡️</span><p>Feels Like</p><strong id="feelsLike">--</strong></div>
+                <div class="detail"><span>💧</span><p>Humidity</p><strong id="humidity">--</strong></div>
+                <div class="detail"><span>💨</span><p>Wind Speed</p><strong id="wind">--</strong></div>
+                <div class="detail"><span>🌬️</span><p>Pressure</p><strong id="pressure">--</strong></div>
+                <div class="detail"><span>👁️</span><p>Visibility</p><strong id="visibility">--</strong></div>
+                <div class="detail"><span>🌅</span><p>Sunrise</p><strong id="sunrise">--</strong></div>
+                <div class="detail"><span>🌇</span><p>Sunset</p><strong id="sunset">--</strong></div>
+            </div>
+
+        </div>
+
+        <footer class="footer">
+            <p>Weather Dashboard · Powered by Open-Meteo API · &copy; 2026</p>
+        </footer>
+
+    </div>
+
+    <script src="weather.js"></script>
+
+</body>
+
+</html>
